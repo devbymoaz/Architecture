@@ -5,22 +5,21 @@ import { ExitToApp } from '@mui/icons-material';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import React from 'react';
-import MainSection from '../MainSection/MainSection';
 import { Link } from 'react-router-dom';
-const Navbar = () => {
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-      setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-      setAnchorEl(null);
-    };
-  
-    const theme = useTheme();
-    return (
-        <>
-            <Box sx={{ flexGrow: 1 }}>
+const PostSection = () => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const theme = useTheme();
+  return (
+    <div>
+      <Box sx={{ flexGrow: 1 }}>
                 <AppBar sx={{ background: theme.palette.primary.main }} position="static">
                     <Toolbar sx={{display:'flex', justifyContent:'space-between'}}>
                         <Box sx={{display:'flex'}}>
@@ -75,9 +74,8 @@ const Navbar = () => {
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
             </Box>
-          <MainSection />
-        </>
-    );
-};
+    </div>
+  )
+}
 
-export default Navbar; 
+export default PostSection
