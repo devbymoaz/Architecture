@@ -4,6 +4,7 @@ import SignUp from "./View/SignUp";
 import Login from "./View/Login";
 import Project from "./Pages/Home/Project";
 import HomePage from "./Pages/Home/HomePage";
+import PostSection from "./Components/PostSection/PostSection";
 // import { Login } from "@mui/icons-material";
 // import Navbar from "./src/Componsnts/header/Navbar";
 // import NavbarLinks from "./src/Componsnts/Header/NavbarLinks";
@@ -18,6 +19,10 @@ export default function Router() {
                     <Navbar />
                 </>
             )
+        },
+        {
+            path:'/posts',
+            element: <PostSection />
         },
         {
             path: '/signup',
