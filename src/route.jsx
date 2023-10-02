@@ -5,6 +5,8 @@ import Login from "./View/Login";
 import Project from "./Pages/Home/Project";
 import HomePage from "./Pages/Home/HomePage";
 import PostSection from "./Components/PostSection/PostSection";
+import AdminDashboard from "./Layouts/AdminDashboard/AdminDashboard";
+import UserDashboard from "./Layouts/UserDashboard";
 // import { Login } from "@mui/icons-material";
 // import Navbar from "./src/Componsnts/header/Navbar";
 // import NavbarLinks from "./src/Componsnts/Header/NavbarLinks";
@@ -40,6 +42,20 @@ export default function Router() {
             path: '/homepage',
             element: <HomePage />
         },
+        {
+            path:'admin-dashboard',
+            element: <AdminDashboard />,
+            children: [
+                // {path:"/",element:<h1>Hello</h1>}
+            ]
+        },
+        {
+            path:'user-dashboard',
+            element: <UserDashboard />,
+            children: [
+                // {path:"/",element:<h1>Hello</h1>}
+            ]
+        }
     ]);
     return element;
 }
